@@ -3,25 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Happy Cow</title>
-    <link href="https://fonts.googleapis.com/css?family=Bitter:400i|Merriweather" rel="stylesheet">
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto+Slab:700|Slabo+27px" rel="stylesheet">  </head>
   <body>
     <header>
       <nav ng-controller="NavigationController as navCtrl">
-      <ul>
-        <li ng-repeat="route in navCtrl.routes">
-           <a href="{{ route.url }}">{{ route.name }}</a>
-        </li>
-      </ul>
-    </nav>
+        <!-- <ul class="nav">
+          <li ng-repeat="route in navCtrl.routes">
+            <a href="{{ route.url }}">{{ route.name }}</a>
+          </li>
+        </ul> -->
+      </nav>
     </header>
     <main>
+      <div class="title">
+        <h1 ng-controller="CowsayController as cowsayCtrl">{{ cowsayCtrl.title }}</h1>
+      </div>
+      <div class="about">
+        <p>Hello there! I'm here to help you say what you want. Just select who you want from the dropdown menu and type what you would like to have it say!</p>
+      </div>
       <section
         ng-controller="CowsayController as cowsayCtrl"
         ng-init="cowsayCtrl.current = 'elephant'">
-        <div class="title">
-          <h1>{{ cowsayCtrl.title }}</h1>
-        </div>
+        <!-- <div class="title">
+        </div> -->
 
         <pre>
           {{ cowsayCtrl.update(cowsayCtrl.text) }}
@@ -50,6 +54,31 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="container">
+            <div class="row">
+                    <h4><strong>Kayla Asay</strong>
+                    </h4>
+                    <!-- <ul>
+                        <li class="email">Email: <a href="mailto:kayla@kayla-asay.com">kayla@kayla-asay.com</a>
+                        </li>
+                    </ul> -->
+                    <br>
+                    <ul class="list-inline">
+                      <li>
+                        <a href="https://www.linkedin.com/in/kaylaasay/"><img src="./img/linkedin.svg"></a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/asay_dev"><img src="./img/twitter.svg"></a>
+                      </li>
+                      <li>
+                        <a href="https://www.facebook.com/kayla.asay.9"><img src="./img/facebook2.svg"></a>
+                      </li>
+                    </ul>
+                    <!-- <hr class="small"> -->
+                    <p class="text-muted">Copyright &copy; kayla-asay.com 2017</p>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>

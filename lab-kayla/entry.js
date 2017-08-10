@@ -54,13 +54,13 @@ function NavigationController($log) {
     //   name:'home',
     //   url:'/home'
     // },
-    {
-      name:'about',
-      url:'/about'
-    },
-    {
-      name:'contact',
-      url:'/contact'
-    }
+    // {
+    //   name:'about',
+    //   url:'/about'
+    // }
+    // {
+    //   name:'contact',
+    //   url:'/contact'
+    // }
   ]
 }
