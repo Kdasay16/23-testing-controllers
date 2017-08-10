@@ -6,26 +6,25 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto+Slab:700|Slabo+27px" rel="stylesheet">  </head>
   <body>
     <header>
-      <nav ng-controller="NavigationController as navCtrl">
+      <!-- <nav ng-controller="NavigationController as navCtrl"> -->
         <!-- <ul class="nav">
           <li ng-repeat="route in navCtrl.routes">
             <a href="{{ route.url }}">{{ route.name }}</a>
           </li>
         </ul> -->
-      </nav>
+      <!-- </nav> -->
     </header>
     <main>
       <div class="title">
         <h1 ng-controller="CowsayController as cowsayCtrl">{{ cowsayCtrl.title }}</h1>
       </div>
       <div class="about">
-        <p>Hello there! I'm here to help you say what you want. Just select who you want from the dropdown menu and type what you would like to have it say!</p>
+        <p>Hello there! What would you like to say? Just select who you want from the dropdown menu and type what you would like to have it say.</p> <br>
+        <p class="two">Hit the SPEAK button to have it saved below. Hit the UNDO button to go back to your previous selection.</p>
       </div>
       <section
         ng-controller="CowsayController as cowsayCtrl"
         ng-init="cowsayCtrl.current = 'elephant'">
-        <!-- <div class="title">
-        </div> -->
 
         <pre>
           {{ cowsayCtrl.update(cowsayCtrl.text) }}
@@ -39,7 +38,7 @@
             <option ng-repeat="cow in cowsayCtrl.cowfiles" value="{{ cow }}">{{ cow }}</option>
           </select>
 
-          <input type="text" ng-model="cowsayCtrl.text" required>
+          <input placeholder="What shall I say?" type="text" ng-model="cowsayCtrl.text" required>
           <button type="submit" name="speak">SPEAK!</button>
 
         </form>
@@ -59,10 +58,10 @@
             <div class="row">
                     <h4><strong>Kayla Asay</strong>
                     </h4>
-                    <!-- <ul>
+                    <ul>
                         <li class="email">Email: <a href="mailto:kayla@kayla-asay.com">kayla@kayla-asay.com</a>
                         </li>
-                    </ul> -->
+                    </ul>
                     <br>
                     <ul class="list-inline">
                       <li>
@@ -75,7 +74,6 @@
                         <a href="https://www.facebook.com/kayla.asay.9"><img src="./img/facebook2.svg"></a>
                       </li>
                     </ul>
-                    <!-- <hr class="small"> -->
                     <p class="text-muted">Copyright &copy; kayla-asay.com 2017</p>
             </div>
         </div>

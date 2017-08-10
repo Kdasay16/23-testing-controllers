@@ -26,7 +26,7 @@ function CowsayController($log, $scope) {
 
     this.update = function(input) {
       $log.debug('#update')
-      return cowsay.say({text: input || 'well hello there', f: this.current})
+      return cowsay.say({text: input || 'change my text', f: this.current})
     }
 
     this.speak = function(input) {
